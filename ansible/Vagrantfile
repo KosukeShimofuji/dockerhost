@@ -1,0 +1,12 @@
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.define "dockerhost.test" do |machine|
+    machine.vm.box = "debian-8.1.0"
+    machine.vm.box_url = "https://github.com/kraksoft/vagrant-box-debian/releases/download/8.1.0/debian-8.1.0-amd64.box"
+    machine.vm.network "private_network", ip: "192.168.10.111"
+    machine.vm.synced_folder ".", "/vagrant", disabled: true
+  end
+end
+
+

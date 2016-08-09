@@ -1,0 +1,3 @@
+ansible/roles/login_user/files/login-key*
+ansible/.vagrant
+ansible/conoha.pem
